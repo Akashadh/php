@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		js
+	</title>
+</head>
+<body>
+<form name="loginform">
+    <label>User name</label>
+    <input type="text" name="usr" placeholder="username"> 
+    <label>Password</label>
+    <input type="password" name="pword" placeholder="password">
+    <input type="submit" value="Login" onSubmit="validateForm();" />
+</form>
+
+<script>
+    function validateForm() {
+        var un = document.loginform.usr.value;
+        var pw = document.loginform.pword.value;
+        var username = "username"; 
+        var password = "password";
+        if ((un == username) && (pw == password)) {
+            window.location = "main.html";
+            return false;
+        }
+        else {
+            alert ("Login was unsuccessful, please check your username and password");
+        }
+      }
+</script
+</html>
